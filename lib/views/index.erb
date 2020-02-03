@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>The Gossip Project</title>
+  </head>
+  <div style="margin: auto;
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px; ">
+    <body>
+      <h1>Bienvenue sur The gossip project.</h1>
+      <p style="margin: auto; width: 25%;"><button style="background-color: white;
+        border: 1px solid black;
+        color:black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;"><a style="text-decoration:none;" href="/gossips/new/">Créé un nouveau gossip</a></button></p><br/>
+      <% gossips.each_with_index do |gossip, index| %>
+        <p style="margin: auto; width: 25%;">
+          <%= gossip.author %> a dit :<br/>
+          <div style="margin: 0 auto;
+          width: 100px; ">
+            <button style="background-color: white;
+            border: 1px solid black;
+            color:black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;"><a href="/gossips/<%= index+1 %>/" style="text-decoration: none;">Ceci</a></button>
+          </div>
+        </p><br/>
+      <% end %>
+    </body>
+  </div>
+</html>

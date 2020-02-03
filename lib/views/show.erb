@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>THP Gossip Land</title>
+  </head>
+  <div style="margin: auto;
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px; ">
+    <body>
+    <% if (1..Gossip.all.length).include? id %>
+      <h2>Voici le gossip n°<%=id%> </h2>
+      <br/>
+      <h3> L'auteur du gossip est : </h3>
+      <p><%= gossip.author %> </>
+      <br/> 
+      <h3> Le gossip est le suivant : </h3>
+      <p> <%= gossip.content %> </p>
+      <button style="background-color: white;
+      border: 1px solid black;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;"><a style="text-decoration: none;"href="/" >Revenir a la liste des potins</a></button>
+    <% end %>
+    </body>
+  </div>
+
+</html>
